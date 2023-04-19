@@ -1,0 +1,11 @@
+--- a/Makefile	2012-05-11 22:17:47.000000000 +0800
++++ b/Makefile	2023-04-19 15:51:29.454786297 +0800
+@@ -17,7 +17,7 @@
+ NSSCDB_DIR = $(sysconfdir)
+ DESTDIR=
+ 
+-CC = cc
++CC ?= cc
+ CFLAGS = -O
+ CDEFS = -D_FILE_OFFSET_BITS=64
+ LD = $(CC)
