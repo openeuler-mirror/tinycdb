@@ -5,12 +5,13 @@ to speed up searches in a sequence of (key,value) pairs with very big number of 
 
 Name:           tinycdb
 Version:        0.78
-Release:        11
+Release:        12
 Summary:        A very fast and simple package for creating and reading constant databases
 License:        Public Domain
 URL:            http://www.corpit.ru/mjt/tinycdb.html
 Source0:        http://www.corpit.ru/mjt/tinycdb/tinycdb-%{version}.tar.gz
 Source1:        libcdb.pc
+Patch0:         tinycdb-fix-cc.patch
 
 BuildRequires:  gcc
 %description %_description
@@ -64,5 +65,8 @@ cp -p debian/libcdb.pc %{buildroot}%{_libdir}/pkgconfig/libcdb.pc
 %{_mandir}/man3/*.3*
 
 %changelog
+* Wed Apr 19 2023 Xiaoya Huang <huangxiaoya@iscas.ac.cn> - 0.78-12
+- Fix CC compiler support
+
 * Fri Nov 15 2019 sunguoshuai <sunguoshuai@huawei.com> - 0.78-11
 - Package init
